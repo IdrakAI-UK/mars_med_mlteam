@@ -86,6 +86,10 @@
         "Not_Interested ": {
             "fileName": "",
             "next_state": "S_NI "
+        },
+        "already ": {
+            "fileName": "",
+            "next_state": "S_NI "
         }
 
     },
@@ -245,6 +249,10 @@
         "affirmation ": {
             "fileName": "",
             "next_state": "S_TRANSFER "
+        },
+        "already":{
+            "fileName": "",
+            "next_state": "disp_NI"
         },
         "None ": {
             "fileName": "",
