@@ -9,6 +9,10 @@
             "fileName": "",
             "next_state": "disp_A "
         },
+        "abusive ": {
+            "fileName": "",
+            "next_state": "disp_DNC "
+        }, 
         "DNC ": {
             "fileName": "",
             "next_state": "disp_DNC "
@@ -20,10 +24,6 @@
         "None ": {
             "fileName": "",
             "next_state": "S_INTRO "
-        },
-        "say_again": {
-            "fileName": "",
-            "next_state": "S_HELLO "
         },
         "language_barrier": {
             "fileName": "",
@@ -72,7 +72,7 @@
             "next_state": "S_TRANSFER "
         },
         "say_again": {
-            "fileName": "only_intro",
+            "fileName": "",
             "next_state": "S_PITCH "
         },
         "language_barrier": {
@@ -86,6 +86,14 @@
         "already ": {
             "fileName": "",
             "next_state": "S_Already"
+        },
+        "interested ": {
+            "fileName": "",
+            "next_state": "S_TRANSFER "
+        },
+        "idk_decline":{
+            "fileName":"",
+            "next_state" : "S_IDK" 
         }
 
     },
@@ -149,10 +157,18 @@
         "already":{
             "fileName": "",
             "next_state": "S_Already"
+        },
+        "interested ": {
+            "fileName": "",
+            "next_state": "S_TRANSFER "
+        },
+        "idk_decline":{
+            "fileName":"",
+            "next_state" : "S_IDK" 
         }
     },
     "S_TRANSFER": {
-        "sec": "3",
+        "sec": "5",
         "fileName": "transfer.wav",
         "reb_state": false,
         "qq_state": false,
@@ -187,24 +203,81 @@
         "DNQ ": {
             "fileName": "",
             "next_state": "disp_DNQ "
+        },
+        "Not_Interested":{
+            "fileName": "",
+            "next_state": "disp_NI "
+        },
+        "BUSY":{
+            "fileName" :"",
+            "next_state":"disp_B "
+        },
+        "decline":{
+            "fileName" :"",
+            "next_state": "S_TRANSFER_REB "
         }
     },
     "S_BUSY": {
-        "sec": "0.0",
+        "sec": "5",
         "fileName": "call_back_rebuttal.wav",
-        "reb_state": true,
+        "reb_state": false,
         "qq_state": false,
-        "None ": {
+        "Not_Interested ": {
+            "fileName": "",
+            "next_state": "disp_NI "
+        },
+        "DNC ": {
+            "fileName": "",
+            "next_state": "disp_DNC "
+        },
+        "scam ": {
+            "fileName": "",
+            "next_state": "disp_DNC "
+        },
+        "abusive ": {
+            "fileName": "",
+            "next_state": "disp_DNC "
+        },
+        "BUSY ": {
             "fileName": "",
             "next_state": "disp_B "
         },
-       "NotSpoke": {
+        "decline ": {
             "fileName": "",
-            "next_state": "disp_B "
+            "next_state": "disp_DNQ "
+        },
+        "answering_machine ": {
+            "fileName": "",
+            "next_state": "disp_A "
+        },
+        "NotSpoke ": {
+            "fileName": "",
+            "next_state": "disp_NI "
+        },
+        "affirmation ": {
+            "fileName": "",
+            "next_state": "S_TRANSFER "
+        },
+        "already":{
+            "fileName": "",
+            "next_state": "S_Already"
+        },
+        "None ": {
+            "fileName": "",
+            "next_state": "S_TRANSFER "
+        },
+        "language_barrier": {
+            "fileName": "",
+            "next_state": "disp_LBR "
+        },
+        "idk_decline":{
+            "fileName":"",
+            "next_state" : "S_IDK" 
         }
+        
     },
     "S_PREV_STATE": {
-        "sec": "5",
+        "sec": "1",
         "fileName": "",
         "reb_state": true,
         "qq_state": false
@@ -261,6 +334,10 @@
         "language_barrier": {
             "fileName": "",
             "next_state": "disp_LBR "
+        },
+        "idk_decline":{
+            "fileName":"",
+            "next_state" : "S_IDK" 
         }
     },
     "S_Already": {
@@ -315,6 +392,184 @@
         "language_barrier": {
             "fileName": "",
             "next_state": "disp_LBR "
+        },
+        "idk_decline":{
+            "fileName":"",
+            "next_state" : "S_IDK" 
+        }
+    },
+    "S_Where": {
+        "sec": "5",
+        "fileName": "where.wav",
+        "reb_state": false,
+        "qq_state": false,
+        "Not_Interested ": {
+            "fileName": "",
+            "next_state": "disp_NI "
+        },
+        "DNC ": {
+            "fileName": "",
+            "next_state": "disp_DNC "
+        },
+        "scam ": {
+            "fileName": "",
+            "next_state": "disp_DNC "
+        },
+        "abusive ": {
+            "fileName": "",
+            "next_state": "disp_DNC "
+        },
+        "BUSY ": {
+            "fileName": "",
+            "next_state": "disp_B "
+        },
+        "decline ": {
+            "fileName": "",
+            "next_state": "disp_DNQ "
+        },
+        "answering_machine ": {
+            "fileName": "",
+            "next_state": "disp_A "
+        },
+        "NotSpoke ": {
+            "fileName": "",
+            "next_state": "disp_NI "
+        },
+        "affirmation ": {
+            "fileName": "",
+            "next_state": "S_TRANSFER "
+        },
+        "already":{
+            "fileName": "",
+            "next_state": "disp_NI"
+        },
+        "None ": {
+            "fileName": "",
+            "next_state": "S_TRANSFER "
+        },
+        "interested":{
+            "fileName":"",
+            "next_state": "S_TRANSFER "
+        },
+        "language_barrier": {
+            "fileName": "",
+            "next_state": "disp_LBR "
+        },
+        "idk_decline":{
+            "fileName":"",
+            "next_state" : "S_IDK" 
+        }
+    },
+    "S_IDK": {
+        "sec": "5",
+        "fileName": "ab_reb.wav",
+        "reb_state": false,
+        "qq_state": false,
+        "Not_Interested ": {
+            "fileName": "",
+            "next_state": "S_NI "
+        },
+        "DNC ": {
+            "fileName": "",
+            "next_state": "disp_DNC "
+        },
+        "scam ": {
+            "fileName": "",
+            "next_state": "disp_DNC "
+        },
+        "abusive ": {
+            "fileName": "",
+            "next_state": "disp_DNC "
+        },
+        "BUSY ": {
+            "fileName": "",
+            "next_state": "disp_B "
+        },
+        "decline ": {
+            "fileName": "",
+            "next_state": "disp_DNQ "
+        },
+        "answering_machine ": {
+            "fileName": "",
+            "next_state": "disp_A "
+        },
+        "NotSpoke ": {
+            "fileName": "",
+            "next_state": "disp_NI "
+        },
+        "affirmation ": {
+            "fileName": "",
+            "next_state": "S_TRANSFER "
+        },
+        "already":{
+            "fileName": "",
+            "next_state": "S_Already"
+        },
+        "None ": {
+            "fileName": "",
+            "next_state": "S_TRANSFER "
+        },
+        "interested":{
+            "fileName":"",
+            "next_state": "S_TRANSFER "
+        },
+        "language_barrier": {
+            "fileName": "",
+            "next_state": "disp_LBR "
+        },
+        "idk_decline":{
+            "fileName":"",
+            "next_state" : "disp_DNQ " 
+        }
+    },
+    "S_TRANSFER_REB": {
+        "sec": "5",
+        "fileName": "transfer_reb.wav",
+        "reb_state": false,
+        "qq_state": false,
+        "answering_machine ": {
+            "fileName": "",
+            "next_state": "disp_A "
+        },
+        "abusive ": {
+            "fileName": "",
+            "next_state": "disp_DNC "
+        },
+        "scam ": {
+            "fileName": "",
+            "next_state": "disp_DNC "
+        },
+        "DNC ": {
+            "fileName": "",
+            "next_state": "disp_DNC "
+        },
+        "affirmation ": {
+            "fileName": "",
+            "next_state": "disp_XFER "
+        },
+        "None ": {
+            "fileName": "",
+            "next_state": "disp_XFER "
+        },
+        "NotSpoke ": {
+            "fileName": "",
+            "next_state": "disp_XFER "
+        },
+        "DNQ ": {
+            "fileName": "",
+            "next_state": "disp_DNQ "
+        },
+        "Not_Interested":{
+            "fileName": "",
+            "next_state": "disp_NI "
+        },
+        "BUSY":{
+            "fileName" :"",
+            "next_state":"disp_B "
+        },
+        "decline":{
+            "fileName" :"",
+            "next_state": "disp_NI "
         }
     }
 }
